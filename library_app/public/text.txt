@@ -1,0 +1,28 @@
+'''
+	def validate(self):
+		self.get_value()
+	
+	def get_value(self):
+		
+		name,author=frappe.db.get_value('Books','Deathnote',['book_name','book_author'])
+		frappe.msgprint(_(f"{name} {author}"))
+	
+	
+
+	def validate(self):
+		self.set_value()
+	
+	def set_value(self):
+		
+		frappe.db.set_value('Books','Deathnote','book_author',"MR X")
+
+	
+
+	def validate(self):
+		self.get_document()
+
+	def get_document(self):
+		doc=frappe.get_doc('Books','Deathnote')
+		frappe.msgprint(_(f"Data: {doc.book_name}"))	
+
+	'''
